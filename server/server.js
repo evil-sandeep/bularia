@@ -16,14 +16,18 @@ app.use(express.json());
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/bularia';
 let isUsingMongoDB = false;
 
-mongoose.connect(MONGODB_URI, { serverSelectionTimeoutMS: 2000 })
+mongoose.connect(MONGODB_URI, {
+    serverSelectionTimeoutMS: 10000,
+    connectTimeoutMS: 10000,
+})
     .then(() => {
-        console.log('Connected to MongoDB');
+        console.log('Connected to MongoDB Atlas successfully!');
         isUsingMongoDB = true;
     })
     .catch(err => {
-        console.warn('MongoDB connection failed. Falling back to local data mode for demo.');
-        console.warn('To use MongoDB, ensure it is running at:', MONGODB_URI);
+        console.warn('MongoDB connection failed:', err.message);
+        console.warn('Falling back to local data mode for demo.');
+        console.warn('To use MongoDB, ensure the URI is correct:', MONGODB_URI);
     });
 
 // Make fallback status available to routes
