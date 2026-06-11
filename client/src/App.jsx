@@ -95,6 +95,7 @@ const App = () => {
                 <div className="container">
                     <nav>
                         <a href="#" className="logo" onClick={() => setView('home')}>
+                            <img src="/logo.jpg" alt="BULARIA+" className="logo-img" />
                             <span className="logo-text">BULARIA+</span>
                         </a>
                         <ul className="nav-links">
@@ -231,7 +232,10 @@ const App = () => {
                 <div className="container">
                     <div className="footer-content">
                         <div>
-                            <div className="logo" style={{ color: 'white' }}>BULARIA+</div>
+                            <div className="logo" style={{ color: 'white', marginBottom: '1rem', cursor: 'pointer' }} onClick={() => setView('home')}>
+                                <img src="/logo.jpg" alt="BULARIA+" className="logo-img" style={{ border: '2px solid white' }} />
+                                <span className="logo-text" style={{ color: 'white' }}>BULARIA+</span>
+                            </div>
                             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
                                 "ଆମ ମାଟି, ଆମ ଗର୍ବ"<br />
                                 Preserving the rich cultural heritage of Odisha through ethical craftsmanship.
