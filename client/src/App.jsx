@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ShoppingCart, Search, User, Home, Plus, Minus, X, ArrowRight, CreditCard, ChevronLeft } from 'lucide-react';
+import Jewellery from './jewellery/Jewellery';
 
 // API Configuration
 const API_URL = import.meta.env.VITE_API_URL || '/api';
@@ -97,6 +98,7 @@ const App = () => {
                         </a>
                         <ul className="nav-links">
                             <li><a href="#" onClick={() => setView('home')}>Home</a></li>
+                            <li><a href="#" onClick={() => setView('jewellery')}>Jewellery</a></li>
                             <li><a href="#">Search</a></li>
                             <li><a href="#">Login</a></li>
                         </ul>
@@ -127,6 +129,10 @@ const App = () => {
                             </div>
                         )}
                     </>
+                )}
+
+                {view === 'jewellery' && (
+                    <Jewellery addToCart={addToCart} />
                 )}
 
                 {view === 'cart' && (

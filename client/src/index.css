@@ -288,3 +288,169 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.1);
   color: rgba(255,255,255,0.5);
 }
+
+/* Jewellery Showcase */
+.jewellery-showcase {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.jewellery-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.jewellery-header h2 {
+  font-size: 2.8rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.jewellery-header p {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.jewellery-scroll-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0.5rem 2rem 0.5rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+.jewellery-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.jewellery-card {
+  flex: 0 0 320px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.jewellery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.jewellery-card .image-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.jewellery-card .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.jewellery-card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+.jewellery-card .category-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--color-secondary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.jewellery-card .info-container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.jewellery-card h3 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.jewellery-card .description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.jewellery-card .purchase-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.jewellery-card .price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.jewellery-card .add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.jewellery-card .add-to-cart-btn:hover {
+  background: var(--color-secondary);
+}
+
+.carousel-arrow {
+  background: white;
+  border: 1px solid rgba(75, 46, 27, 0.1);
+  color: var(--color-primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: var(--transition);
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.carousel-arrow:hover {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
