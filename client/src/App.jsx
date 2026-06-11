@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ShoppingCart, Search, User, Home, Plus, Minus, X, ArrowRight, CreditCard, ChevronLeft } from 'lucide-react';
 
 // API Configuration
-const API_URL = '/api';
+const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 const App = () => {
     const [view, setView] = useState('home'); // home, cart, checkout, success
